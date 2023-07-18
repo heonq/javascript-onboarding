@@ -3,6 +3,19 @@ function problem1(pobi, crong) {
   return answer;
 }
 
+const getMaxSum = (pages) => {
+  return Math.max(
+    ...pages.map((page) => {
+      return page
+        .toString()
+        .split("")
+        .reduce((acc, curr) => {
+          return acc + Number(curr);
+        }, 0);
+    })
+  );
+};
+
 const validatePages = (pages) => {
   if (pages[1] - pages[0] !== 1) return false;
   if (pages[0] <= 1 || pages[1] >= 400) return false;
