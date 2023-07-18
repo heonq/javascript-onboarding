@@ -29,7 +29,7 @@ const getMaxMultiple = (pages) => {
   );
 };
 
-const geMaxNumber = (pages) => {
+const getMaxNumber = (pages) => {
   const maxSum = getMaxSum(pages);
   const maxMultiple = getMaxMultiple(pages);
   return Math.max(maxSum, maxMultiple);
