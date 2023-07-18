@@ -1,6 +1,8 @@
 function problem1(pobi, crong) {
   const pobiValue = getMaxNumber(pobi);
   const crongValue = getMaxNumber(crong);
+  const pobiValid = validatePages(pobi);
+  const crongValid = validatePages(crong);
 }
 
 const getMaxSum = (pages) => {
