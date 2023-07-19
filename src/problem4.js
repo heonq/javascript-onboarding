@@ -7,7 +7,12 @@ const CHAR_CODE_VALUE = {
   uppercase: 155,
 };
 
-function problem4(word) {}
+function problem4(word) {
+  return word
+    .split("")
+    .map((character) => getReverseWord(character))
+    .join("");
+}
 
 const getReverseWord = (character) => {
   const charCode = character.charCodeAt();
