@@ -3,6 +3,7 @@ function problem3(number) {
   for (let i = 1; i <= number; i++) {
     numberArr.push(i);
   }
+  const numberString = numberArr.join("");
 }
 
 module.exports = problem3;
