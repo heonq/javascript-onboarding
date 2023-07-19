@@ -4,6 +4,7 @@ function problem5(money) {
   const amountArray = [];
   for (let i = 0; i < unitArray.length; i++) {
     amountArray.push(Math.floor(money / unitArray[i]));
+    money = money % unitArray[i];
   }
 }
 
