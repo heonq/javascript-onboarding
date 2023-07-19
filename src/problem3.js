@@ -5,9 +5,7 @@ function problem3(number) {
   for (let i = 1; i <= number; i++) {
     numberArr.push(i);
   }
-  const numberString = numberArr.join("");
-  const clapNumbers = numberString.match(regExp);
-  return clapNumbers.length;
+  return numberArr.join("").match(regExp).length;
 }
 
 module.exports = problem3;
