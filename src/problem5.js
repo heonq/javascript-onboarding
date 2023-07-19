@@ -6,6 +6,7 @@ function problem5(money) {
     amountArray.push(Math.floor(money / unitArray[i]));
     money = money % unitArray[i];
   }
+  return amountArray;
 }
 
 module.exports = problem5;
