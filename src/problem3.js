@@ -7,6 +7,7 @@ function problem3(number) {
   }
   const numberString = numberArr.join("");
   const clapNumbers = numberString.match(regExp);
+  return clapNumbers.length;
 }
 
 module.exports = problem3;
