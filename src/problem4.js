@@ -9,4 +9,11 @@ const CHAR_CODE_VALUE = {
 
 function problem4(word) {}
 
+const getReverseWord = (character) => {
+  const charCode = character.charCodeAt();
+  if (charCode >= CHAR_CODE_VALUE.A && charCode <= CHAR_CODE_VALUE.Z) {
+    return String.fromCharCode(CHAR_CODE_VALUE.uppercase - charCode);
+  }
+};
+
 module.exports = problem4;
