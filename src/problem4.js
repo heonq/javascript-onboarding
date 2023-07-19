@@ -1,4 +1,4 @@
-const charCodeValue = {
+const CHAR_CODE_VALUE = {
   A: 65,
   Z: 90,
   a: 97,
