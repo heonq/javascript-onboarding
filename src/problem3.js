@@ -6,6 +6,7 @@ function problem3(number) {
     numberArr.push(i);
   }
   const numberString = numberArr.join("");
+  const clapNumbers = numberString.match(regExp);
 }
 
 module.exports = problem3;
