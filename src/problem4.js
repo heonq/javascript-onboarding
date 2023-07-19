@@ -14,6 +14,9 @@ const getReverseWord = (character) => {
   if (charCode >= CHAR_CODE_VALUE.A && charCode <= CHAR_CODE_VALUE.Z) {
     return String.fromCharCode(CHAR_CODE_VALUE.uppercase - charCode);
   }
+  if (charCode >= CHAR_CODE_VALUE.a && charCode <= CHAR_CODE_VALUE.z) {
+    return String.fromCharCode(CHAR_CODE_VALUE.lowercase - charCode);
+  }
 };
 
 module.exports = problem4;
