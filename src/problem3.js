@@ -1,6 +1,8 @@
 function problem3(number) {
-  var answer;
-  return answer;
+  const numberArr = [];
+  for (let i = 1; i <= number; i++) {
+    numberArr.push(i);
+  }
 }
 
 module.exports = problem3;
