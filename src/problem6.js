@@ -9,8 +9,9 @@ const getDuplicatedEmail = (forms) => {
       const twoLetter = nickName.substr(i, i + 2);
       if (twoLetterAndEmail.has(twoLetter)) {
         duplicatedUserNickName.add(email);
-        duplicatedUserNickName.add(twoLetterAndEmail.get(twoLetter));
+        return duplicatedUserNickName.add(twoLetterAndEmail.get(twoLetter));
       }
+      twoLetterAndEmail.set(twoLetter, email);
     }
   });
 };
