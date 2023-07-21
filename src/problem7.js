@@ -24,9 +24,9 @@ const getVisitorsNotFriend = (visitors, friendsOfUser) => {
   return visitors.filter((visitor) => !friendsOfUser.includes(visitor));
 };
 
-const calScore = (user, friendsOfUser, visitorsNotFriend) => {
+const calScore = (user, mutualFriends, visitorsNotFriend) => {
   const scoreMap = new Map();
-  friendsOfUser.forEach((friend) => {
+  mutualFriends.forEach((friend) => {
     if (scoreMap.has(friend))
       return scoreMap.set(friend, scoreMap.get(friend) + 10);
     scoreMap.set(friend, 10);
