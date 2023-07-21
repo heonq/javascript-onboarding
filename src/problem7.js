@@ -20,4 +20,8 @@ const getMutualFriends = (friends, friendOfUser) => {
   return mutualFriend;
 };
 
+const getVisitorNotFriend = (visitors, friendOfUser) => {
+  return visitors.filter((visitor) => !friendOfUser.includes(visitor));
+};
+
 module.exports = problem7;
