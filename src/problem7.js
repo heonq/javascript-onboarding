@@ -1,32 +1,32 @@
 function problem7(user, friends, visitors) {}
 
-const getFriendOfUser = (user, friends) => {
-  let friendOfUser = [];
+const getFriendsOfUser = (user, friends) => {
+  let friendsOfUser = [];
   friends.forEach((relationship) => {
     if (relationship.includes(user)) {
       mutualFriend.push(relationship[1 - relationship.indexOf(user)]);
     }
   });
-  return friendOfUser;
+  return friendsOfUser;
 };
 
-const getMutualFriends = (friends, friendOfUser) => {
+const getMutualFriends = (friends, friendsOfUser) => {
   let mutualFriend = [];
   friends.forEach(([A, B]) => {
-    if (friendOfUser.includes(A) && friendOfUser.includes(B)) return;
-    if (friendOfUser.includes(A)) return mutualFriend.push(B);
-    if (friendOfUser.includes(B)) return mutualFriend.push(A);
+    if (friendsOfUser.includes(A) && friendsOfUser.includes(B)) return;
+    if (friendsOfUser.includes(A)) return mutualFriend.push(B);
+    if (friendsOfUser.includes(B)) return mutualFriend.push(A);
   });
   return mutualFriend;
 };
 
-const getVisitorsNotFriend = (visitors, friendOfUser) => {
-  return visitors.filter((visitor) => !friendOfUser.includes(visitor));
+const getVisitorsNotFriend = (visitors, friendsOfUser) => {
+  return visitors.filter((visitor) => !friendsOfUser.includes(visitor));
 };
 
-const calScore = (user, friendOfUser, visitorsNotFriend) => {
+const calScore = (user, friendsOfUser, visitorsNotFriend) => {
   const scoreMap = new Map();
-  friendOfUser.forEach((friend) => {
+  friendsOfUser.forEach((friend) => {
     if (scoreMap.has(friend))
       return scoreMap.set(friend, scoreMap.get(friend) + 10);
     scoreMap.set(friend, 10);
