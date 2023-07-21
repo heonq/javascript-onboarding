@@ -1,4 +1,6 @@
-function problem6(forms) {}
+function problem6(forms) {
+  return getDuplicatedEmail(forms);
+}
 
 const getDuplicatedEmail = (forms) => {
   const twoLetterAndEmail = new Map();
@@ -14,6 +16,7 @@ const getDuplicatedEmail = (forms) => {
       twoLetterAndEmail.set(twoLetter, email);
     }
   });
+  return [...duplicatedUserNickName].sort();
 };
 
 module.exports = problem6;
