@@ -19,8 +19,8 @@ const getMutualFriends = (friends, friendsOfUser) => {
   let mutualFriends = [];
   friends.forEach(([A, B]) => {
     if (friendsOfUser.includes(A) && friendsOfUser.includes(B)) return;
-    if (friendsOfUser.includes(A)) return mutualFriend.push(B);
-    if (friendsOfUser.includes(B)) return mutualFriend.push(A);
+    if (friendsOfUser.includes(A)) return mutualFriends.push(B);
+    if (friendsOfUser.includes(B)) return mutualFriends.push(A);
   });
   return mutualFriends;
 };
