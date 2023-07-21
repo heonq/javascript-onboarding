@@ -11,13 +11,13 @@ const getFriendsOfUser = (user, friends) => {
 };
 
 const getMutualFriends = (friends, friendsOfUser) => {
-  let mutualFriend = [];
+  let mutualFriends = [];
   friends.forEach(([A, B]) => {
     if (friendsOfUser.includes(A) && friendsOfUser.includes(B)) return;
     if (friendsOfUser.includes(A)) return mutualFriend.push(B);
     if (friendsOfUser.includes(B)) return mutualFriend.push(A);
   });
-  return mutualFriend;
+  return mutualFriends;
 };
 
 const getVisitorsNotFriend = (visitors, friendsOfUser) => {
