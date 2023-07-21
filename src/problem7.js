@@ -2,14 +2,14 @@ function problem7(user, friends, visitors) {
   const friendsOfUser = getFriendsOfUser(user, friends);
   const mutualFriends = getMutualFriends(friends, friendsOfUser);
   const visitorsNotFriend = getVisitorsNotFriend(visitors, friendsOfUser);
-  return calcScore(user, mutualFriends, visitorsNotFriend);
+  return calScore(user, mutualFriends, visitorsNotFriend);
 }
 
 const getFriendsOfUser = (user, friends) => {
   let friendsOfUser = [];
   friends.forEach((relationship) => {
     if (relationship.includes(user)) {
-      mutualFriend.push(relationship[1 - relationship.indexOf(user)]);
+      friendsOfUser.push(relationship[1 - relationship.indexOf(user)]);
     }
   });
   return friendsOfUser;
