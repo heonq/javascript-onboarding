@@ -23,4 +23,14 @@ const getMutualFriends = (friends, friendOfUser) => {
 const getVisitorsNotFriend = (visitors, friendOfUser) => {
   return visitors.filter((visitor) => !friendOfUser.includes(visitor));
 };
+
+const calScore = (user, friendOfUser, VisitorsNotFriend) => {
+  const scoreMap = new Map();
+  friendsOfUser.forEach((friend) => {
+    if (scoreMap.has(friend))
+      return scoreMap.set(friend, scoreMap.get(friend) + 10);
+    scoreMap.set(friend, 10);
+  });
+};
+
 module.exports = problem7;
