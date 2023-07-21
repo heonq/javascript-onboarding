@@ -2,7 +2,7 @@ function problem7(user, friends, visitors) {
   const friendsOfUser = getFriendsOfUser(user, friends);
   const mutualFriends = getMutualFriends(friends, friendsOfUser);
   const visitorsNotFriend = getVisitorsNotFriend(visitors, friendsOfUser);
-  return calScore(user, mutualFriends, visitorsNotFriend);
+  return calcScore(user, mutualFriends, visitorsNotFriend);
 }
 
 const getFriendsOfUser = (user, friends) => {
@@ -29,7 +29,7 @@ const getVisitorsNotFriend = (visitors, friendsOfUser) => {
   return visitors.filter((visitor) => !friendsOfUser.includes(visitor));
 };
 
-const calScore = (user, mutualFriends, visitorsNotFriend) => {
+const calcScore = (user, mutualFriends, visitorsNotFriend) => {
   const scoreMap = new Map();
   mutualFriends.forEach((friend) => {
     if (scoreMap.has(friend))
