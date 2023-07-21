@@ -10,4 +10,14 @@ const getFriendOfUser = (user, friends) => {
   return friendOfUser;
 };
 
+const getMutualFriends = (friends, friendOfUser) => {
+  let mutualFriend = [];
+  friends.forEach(([A, B]) => {
+    if (friendOfUser.includes(A) && friendOfUser.includes(B)) return;
+    if (friendOfUser.includes(A)) return mutualFriend.push(B);
+    if (friendOfUser.includes(B)) return mutualFriend.push(A);
+  });
+  return mutualFriend;
+};
+
 module.exports = problem7;
