@@ -1,4 +1,9 @@
-function problem7(user, friends, visitors) {}
+function problem7(user, friends, visitors) {
+  const friendsOfUser = getFriendsOfUser(user, friends);
+  const mutualFriends = getMutualFriends(friends, friendsOfUser);
+  const visitorsNotFriend = getVisitorsNotFriend(visitors, friendsOfUser);
+  return calcScore(user, mutualFriends, visitorsNotFriend);
+}
 
 const getFriendsOfUser = (user, friends) => {
   let friendsOfUser = [];
